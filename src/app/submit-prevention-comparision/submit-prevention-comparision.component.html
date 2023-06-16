@@ -1,0 +1,33 @@
+<p>submit-prevention-comparision works!</p>
+<div>
+    <p>Prevent User submit form if there is no changes in form or no changes in existing data</p>
+    <form [formGroup]="this.formGroupComparision">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+                formControlName="firstName" />
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+                formControlName="lastName" />
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+                formControlName="phoneNumber" />
+        </div>
+        <div class="input-group mb-9">
+            <button type="submit"
+             class="btn btn-primary btn-customized mt-4"
+             [disabled]="this.disabledSubmittion">
+                Sign Up
+            </button>
+        </div>
+
+        <div class=" mb-12">
+            <label>status of form control : {{this.formGroupComparision.status}}</label>
+            <br>
+            <label>touch of form control : {{this.formGroupComparision.touched}}</label>
+            <br>
+            <label>pristine of form control : {{this.formGroupComparision.pristine}}</label>
+            <br>
+            <label>dirty of form control : {{this.formGroupComparision.dirty}}</label>
+        </div>
+    </form>
+
+
+</div>
