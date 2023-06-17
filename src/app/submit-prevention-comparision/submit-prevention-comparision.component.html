@@ -1,7 +1,7 @@
 <p>submit-prevention-comparision works!</p>
 <div>
-    <p>Prevent User submit form if there is no changes in form or no changes in existing data</p>
-    <form [formGroup]="this.formGroupComparision">
+    <p id="title_submit_prevention">Prevent User submit form if there is no changes in form or no changes in existing data</p>
+    <form [formGroup]="this.formGroupComparision" id = "formGroupComparision">
         <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
                 formControlName="firstName" />
@@ -12,8 +12,9 @@
         </div>
         <div class="input-group mb-9">
             <button type="submit"
-             class="btn btn-primary btn-customized mt-4"
-             [disabled]="this.disabledSubmittion">
+             class="disable_button btn btn-primary btn-customized mt-4"
+             [disabled]="this.disabledSubmittion"
+             (onSubmit)="onSubmit()">
                 Sign Up
             </button>
         </div>

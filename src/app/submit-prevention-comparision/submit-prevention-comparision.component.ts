@@ -59,4 +59,8 @@ export class SubmitPreventionComparisionComponent implements OnInit  {
       phoneNumber:'1111231234'
     }
   }
+
+  onSubmit(){
+    console.log("ready to submit");
+  }
 }
