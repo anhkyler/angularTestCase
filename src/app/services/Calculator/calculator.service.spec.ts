@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { CalculatorService } from './calculator.service';
+import { LoggerService } from '../Logger/logger.service';
 
 describe('CalculatorService', () => {
   let service: CalculatorService;
@@ -15,13 +16,14 @@ describe('CalculatorService', () => {
   });
 
   it('should add two number', ()=> {
-
-    const calculator = new CalculatorService();
+    let loggerSerice = new LoggerService();
+    const calculator = new CalculatorService(loggerSerice);
     let result = calculator.add(2,2);
     expect(result).toBe(4);
   });
-  it('should - two number',()=> {
-    const calculator = new CalculatorService();
+  it('should - two number',()=> {    
+    let loggerSerice = new LoggerService();
+    const calculator = new CalculatorService(loggerSerice);
     let result = calculator.substract(2,2);
     expect(result).toBe(0);
   });
