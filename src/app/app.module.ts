@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SubmitPreventionComparisionComponent } from './submit-prevention-comparision/submit-prevention-comparision.component';
 import { CalculatorService } from './services/Calculator/calculator.service';
+import { StrengthPipe } from './pipes/Strength/strength.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    SubmitPreventionComparisionComponent
+    SubmitPreventionComparisionComponent,
+    StrengthPipe
   ],
   imports: [
     BrowserModule,

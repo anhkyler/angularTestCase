@@ -8,7 +8,7 @@ describe('CalculatorService', () => {
   let mockLoggerSerice: any;
   let calculator: CalculatorService;
   beforeEach(() => {
-    mockLoggerSerice = jasmine.createSpyObj('LoggerService',['log']);
+    mockLoggerSerice = jasmine.createSpyObj('LoggerService',['log','printlog']);
     calculator = new CalculatorService(mockLoggerSerice);
     // TestBed.configureTestingModule({});
     // service = TestBed.inject(CalculatorService);

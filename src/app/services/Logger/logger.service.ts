@@ -10,4 +10,9 @@ export class LoggerService {
   log(message:string){
     this.message.push(message);
   }
+
+
+  printlog(){
+    this.message.pop();
+  }
 }
