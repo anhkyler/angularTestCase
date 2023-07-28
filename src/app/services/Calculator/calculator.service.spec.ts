@@ -17,14 +17,19 @@ describe('CalculatorService', () => {
 
   it('should add two number', ()=> {
     let loggerSerice = new LoggerService();
+    spyOn(loggerSerice,'log');
     const calculator = new CalculatorService(loggerSerice);
     let result = calculator.add(2,2);
     expect(result).toBe(4);
+    expect(loggerSerice.log).toHaveBeenCalledTimes(1);
   });
   it('should - two number',()=> {    
-    let loggerSerice = new LoggerService();
+    let loggerSerice = jasmine.createSpyObj('loggerService',['log']);
+    // spyOn(loggerSerice,'log')
+    //proxy project
     const calculator = new CalculatorService(loggerSerice);
     let result = calculator.substract(2,2);
     expect(result).toBe(0);
+    expect(loggerSerice.log).toHaveBeenCalledTimes(1);
   });
 });
