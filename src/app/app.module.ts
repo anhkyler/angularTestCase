@@ -7,18 +7,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SubmitPreventionComparisionComponent } from './submit-prevention-comparision/submit-prevention-comparision.component';
 import { CalculatorService } from './services/Calculator/calculator.service';
 import { StrengthPipe } from './pipes/Strength/strength.pipe';
+import { PostsComponent } from './components/posts/posts.component';
+import { HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     SubmitPreventionComparisionComponent,
-    StrengthPipe
+    StrengthPipe,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     AppRoutingModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [CalculatorService],
   bootstrap: [AppComponent]
